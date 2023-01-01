@@ -12,6 +12,7 @@ class MenuActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var ibAboutMe : ImageButton
     private lateinit var ibVaccine : ImageButton
     private lateinit var ibAdoptMe : ImageButton
+    private lateinit var ibPetCare : ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +27,8 @@ class MenuActivity : AppCompatActivity(), View.OnClickListener {
         ibVaccine.setOnClickListener(this)
         ibAdoptMe = binding.ibAdoptMe
         ibAdoptMe.setOnClickListener(this)
+        ibPetCare = binding.ibPetCare
+        ibPetCare.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -40,8 +43,12 @@ class MenuActivity : AppCompatActivity(), View.OnClickListener {
                     startActivity(intentVaccine)
                 }
                 R.id.ibAdoptMe -> run {
-                    val intentVaccine = Intent(this@MenuActivity, CatAdoptionActivity::class.java)
-                    startActivity(intentVaccine)
+                    val intentAdopt = Intent(this@MenuActivity, CatAdoptionActivity::class.java)
+                    startActivity(intentAdopt)
+                }
+                R.id.ibPetCare -> run {
+                    val intentLove = Intent(this@MenuActivity, LoveActivity::class.java)
+                    startActivity(intentLove)
                 }
             }
         }

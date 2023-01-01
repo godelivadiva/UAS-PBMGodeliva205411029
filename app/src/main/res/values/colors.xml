@@ -8,7 +8,10 @@
     <color name="white">#ffffff</color>
     <color name="card_about_me">#5D94FF</color>
 
+    <color name="bg_background">#D9F7E5</color>
     <color name="menu_background">#6A9195</color>
     <color name="button_background">#BD6B2B</color>
+    <color name="text_background">#956E6A</color>
+    <color name="desc_background">#7C956A</color>
 
 </resources>

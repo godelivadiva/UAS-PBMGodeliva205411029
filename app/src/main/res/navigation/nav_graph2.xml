@@ -18,6 +18,5 @@
     <fragment
         android:id="@+id/CatAdoptionDetailFragment"
         android:name="com.example.pbmgodeliva205411029.CatAdoptionDetailFragment"
-        android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_cat_adoption_detail" />
 </navigation>
