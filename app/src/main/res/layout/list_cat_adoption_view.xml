@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="cat_adoption"
+            type="com.example.pbmgodeliva205411029.CatAdoption" />
+        <variable
+            name="clickListener"
+            type="com.example.pbmgodeliva205411029.CatAdoptionListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCatAdoption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:onClick="@{() -> clickListener.onClick(cat_adoption)}"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/ivCatAdopt"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:padding="8dp"
+                android:textSize="18sp"
+                android:text="@{cat_adoption.name}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Joko"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="6"
+                android:padding="8dp"
+                android:textSize="18sp"
+                android:text="@{cat_adoption.age}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="2 tahun"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph2"
+    app:startDestination="@id/CatAdoptionFragment">
+
+    <fragment
+        android:id="@+id/CatAdoptionFragment"
+        android:name="com.example.pbmgodeliva205411029.CatAdoptionFragment"
+        android:label="CatAdoptionFragment"
+        tools:layout="@layout/fragment_cat_adoption">
+
+        <action
+            android:id="@+id/action_CatAdoptionFragment_to_CatAdoptionDetailFragment"
+            app:destination="@id/CatAdoptionDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CatAdoptionDetailFragment"
+        android:name="com.example.pbmgodeliva205411029.CatAdoptionDetailFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_cat_adoption_detail" />
+</navigation>
