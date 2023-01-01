@@ -14,7 +14,6 @@ class CatAdoptionFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private val viewModel: CatVaccineViewModel by activityViewModels()
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,7 +29,6 @@ class CatAdoptionFragment : Fragment() {
             findNavController()
                 .navigate(R.id.action_CatAdoptionFragment_to_CatAdoptionDetailFragment)
         })
-
         return binding.root
     }
 }

@@ -46,8 +46,6 @@ class CatVaccineViewModel: ViewModel() {
 
     //  fungsi yang akan dipanggil ketika Amphibian di click
     fun onCatAdoptionClicked(catAdoption: CatAdoption) {
-        // TODO: Set the amphibian object
-        // Amphibian yang dipilih akan ditampilkan pada detail
         _catAdoption.value = catAdoption
     }
 

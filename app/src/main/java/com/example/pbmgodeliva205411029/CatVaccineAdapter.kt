@@ -22,10 +22,6 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pbmgodeliva205411029.databinding.ListCatVaccineViewBinding
 
-/**
- * This class implements a [RecyclerView] [ListAdapter] which uses Data Binding to present [List]
- * data, including computing diffs between lists.
- */
 class CatVaccineAdapter :
     ListAdapter<CatVaccine, CatVaccineAdapter.CatVaccineViewHolder>(DiffCallback) {
 

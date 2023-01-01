@@ -9,10 +9,6 @@ import com.example.pbmgodeliva205411029.databinding.ListCatAdoptionViewBinding
 import com.example.pbmgodeliva205411029.databinding.ListCatVaccineViewBinding
 
 
-/**
- * This class implements a [RecyclerView] [ListAdapter] which uses Data Binding to present [List]
- * data, including computing diffs between lists.
- */
 class CatAdoptionAdapter(val clickListener: CatAdoptionListener) :
     ListAdapter<CatAdoption, CatAdoptionAdapter.CatAdoptionViewHolder>(DiffCallback) {
 
@@ -33,7 +29,8 @@ class CatAdoptionAdapter(val clickListener: CatAdoptionListener) :
         }
 
         override fun areContentsTheSame(oldItem: CatAdoption, newItem: CatAdoption): Boolean {
-            return oldItem.age == newItem.age && oldItem.description == newItem.description
+            return oldItem.age == newItem.age && oldItem.description == newItem.description &&
+                    oldItem.imgSrcUrl == newItem.imgSrcUrl
         }
 
     }
