@@ -8,13 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.example.pbmgodeliva205411029.databinding.FragmentCatAdoptionDetailBinding
 
-/**
- * A simple [Fragment] subclass.
- * Use the [CatAdoptionDetailFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CatAdoptionDetailFragment : Fragment() {
-
+    // define viewmodel yang digunakan
     private val viewModel: CatVaccineViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -22,7 +17,9 @@ class CatAdoptionDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentCatAdoptionDetailBinding.inflate(inflater)
+        // define data dari livedata pada binding (fragment ini)
         binding.lifecycleOwner = this
+        // define viewmodel
         binding.viewModel = viewModel
 
         // Inflate the layout for this fragment

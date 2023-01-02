@@ -10,9 +10,9 @@ class LoveActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityLoveBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // menyembunyikan action bar
         supportActionBar?.hide()
 
     }

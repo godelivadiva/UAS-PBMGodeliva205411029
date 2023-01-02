@@ -48,6 +48,7 @@ class CatAdoptionAdapter(val clickListener: CatAdoptionListener) :
     }
 }
 
+// listener ketika salah satu pet di click
 class CatAdoptionListener(val clickListener: (catAdoption: CatAdoption) -> Unit) {
     fun onClick(catAdoption: CatAdoption) = clickListener(catAdoption)
 }

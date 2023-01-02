@@ -19,8 +19,10 @@ class MenuActivity : AppCompatActivity(), View.OnClickListener {
 
         val binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // menyembunyikan action bar
         supportActionBar?.hide()
 
+        // declare seluruh button yang ada di menu
         ibAboutMe = binding.ibAboutMe
         ibAboutMe.setOnClickListener(this)
         ibVaccine = binding.ibVaccine
@@ -31,6 +33,7 @@ class MenuActivity : AppCompatActivity(), View.OnClickListener {
         ibPetCare.setOnClickListener(this)
     }
 
+    // action ketika button diklik dan mengarahkan ke masing-masing activity
     override fun onClick(v: View?) {
         if (v != null) {
             when(v.id) {

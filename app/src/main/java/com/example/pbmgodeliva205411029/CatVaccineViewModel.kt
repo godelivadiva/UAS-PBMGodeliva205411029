@@ -8,20 +8,19 @@ import kotlinx.coroutines.launch
 
 class CatVaccineViewModel: ViewModel() {
 
-    // TODO: Create properties to represent MutableLiveData and LiveData for a list of amphibian objects
-    // Menampilkan daftar amphibi untuk List dengan menggunakan MutableLiveData dan LiveData
+    // Menampilkan daftar vaccine untuk List dengan menggunakan MutableLiveData dan LiveData
     private val _catVaccines = MutableLiveData<List<CatVaccine>>()
     val catVaccines: LiveData<List<CatVaccine>> = _catVaccines
 
+    // Menampilkan daftar adoption untuk List dengan menggunakan MutableLiveData dan LiveData
     private val _catAdoptions = MutableLiveData<List<CatAdoption>>()
     val catAdoptions: LiveData<List<CatAdoption>> = _catAdoptions
 
+    // Variabel ini akan digunakan untuk menyimpan pet yang dipilih dan ditampilkan di layar detail
     private val _catAdoption = MutableLiveData<CatAdoption>()
     val catAdoption: LiveData<CatAdoption> = _catAdoption
 
-    // TODO: Create a function that gets a list of amphibians from the api service and sets the
-    //  status via a Coroutine
-    // Untuk mendapatkan list Amphibian dari API
+    // Untuk mendapatkan list Vaccine dari API
     fun getCatVaccineList() {
         // Menggunakan try-catch untuk menangani error (data akan kosong alih-alih force close)
         viewModelScope.launch {
@@ -33,6 +32,7 @@ class CatVaccineViewModel: ViewModel() {
         }
     }
 
+    // Untuk mendapatkan list pet adoption dari API
     fun getCatAdoptionList() {
         // Menggunakan try-catch untuk menangani error (data akan kosong alih-alih force close)
         viewModelScope.launch {
@@ -44,7 +44,7 @@ class CatVaccineViewModel: ViewModel() {
         }
     }
 
-    //  fungsi yang akan dipanggil ketika Amphibian di click
+    //  fungsi yang akan dipanggil ketika salah satu pet di click
     fun onCatAdoptionClicked(catAdoption: CatAdoption) {
         _catAdoption.value = catAdoption
     }

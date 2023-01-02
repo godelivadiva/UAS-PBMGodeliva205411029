@@ -20,9 +20,7 @@ class MainActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
-        // we used the postDelayed(Runnable, time) method
-        // to send a message with a delayed time.
-
+        // define berapa detik menampilkan halaman main ini sebelum ke halaman menu
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)

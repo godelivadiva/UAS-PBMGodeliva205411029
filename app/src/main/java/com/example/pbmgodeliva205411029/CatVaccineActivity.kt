@@ -30,8 +30,10 @@ class CatVaccineActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cat_vaccine)
+        // menyembunyikan action bar
         supportActionBar?.hide()
 
+        // define id dari fragment yang digunakan (ada di folder res/navigation)
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController

@@ -19,6 +19,7 @@ class CatAdoptionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cat_adoption)
+        // menyembunyikan action bar
         supportActionBar?.hide()
 
         val navHostFragment = supportFragmentManager

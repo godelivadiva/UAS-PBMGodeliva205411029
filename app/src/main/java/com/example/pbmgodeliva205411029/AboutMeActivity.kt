@@ -2,7 +2,6 @@ package com.example.pbmgodeliva205411029
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.example.pbmgodeliva205411029.databinding.ActivityAboutMeBinding
 
 class AboutMeActivity : AppCompatActivity() {
@@ -10,6 +9,7 @@ class AboutMeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityAboutMeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // menyembunyikan action bar
         supportActionBar?.hide()
 
     }

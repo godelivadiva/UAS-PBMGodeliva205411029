@@ -8,13 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.example.pbmgodeliva205411029.databinding.FragmentCatVaccineBinding
 
-/**
- * A simple [Fragment] subclass.
- * Use the [CatVaccineFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CatVaccineFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+    // define viewmodel yang akan digunakan
     private val viewModel: CatVaccineViewModel by activityViewModels()
 
 
@@ -25,10 +20,14 @@ class CatVaccineFragment : Fragment() {
         val binding = FragmentCatVaccineBinding.inflate(inflater)
 
         viewModel.getCatVaccineList()
+        // define data dari livedata pada binding (fragment ini)
         binding.lifecycleOwner = this
+        // define viewmodel
         binding.viewModel = viewModel
+        // define adapter
         binding.recyclerView.adapter = CatVaccineAdapter()
 
+        // Inflate the layout for this fragment
         return binding.root
     }
 }
